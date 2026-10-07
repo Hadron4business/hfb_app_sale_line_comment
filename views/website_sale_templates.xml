@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="cart_lines_line_comment" inherit_id="website_sale.cart_lines"
+              name="Cart: Customer Comment per Line">
+        <xpath expr="//t[@t-call='website_sale.cart_line_description_following_lines']" position="after">
+            <t t-set="hfb_comment_tmpl" t-value="line.product_id.product_tmpl_id.sudo()"/>
+            <div t-if="hfb_comment_tmpl._sale_line_comment_enabled()" class="o_hfb_line_comment mt-2 mb-2">
+                <label t-attf-for="o_hfb_line_comment_#{line.id}" class="form-label small text-muted mb-1"
+                       t-out="hfb_comment_tmpl._sale_line_comment_get_label()"/>
+                <textarea t-attf-id="o_hfb_line_comment_#{line.id}"
+                          class="form-control form-control-sm o_hfb_line_comment_input"
+                          rows="2" maxlength="2000"
+                          t-att-data-line-id="line.id"
+                          t-out="line.line_comment or ''"/>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="sale_order_portal_content_line_comment" inherit_id="sale.sale_order_portal_content"
+              name="Portal: Customer Comment per Line">
+        <xpath expr="//td[@id='product_name']" position="inside">
+            <div t-if="line.line_comment" class="text-muted small fst-italic o_hfb_line_comment"
+                 t-field="line.line_comment"/>
+        </xpath>
+    </template>
+
+</odoo>

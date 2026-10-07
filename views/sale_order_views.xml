@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_order_form_line_comment" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.line.comment</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/list/field[@name='product_uom_qty']" position="before">
+                <field name="line_comment" optional="show"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']/form//field[@name='name']" position="after">
+                <field name="line_comment" placeholder="Comment of the customer for this product"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
