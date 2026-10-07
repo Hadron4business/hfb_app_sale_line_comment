@@ -29,7 +29,7 @@ Switch on a comment box for chosen products or whole categories, with your own l
 - Depends on `website_sale` and `sale_stock`.
 - Fields: `sale.order.line.line_comment`, `account.move.line.line_comment`, `stock.move.sale_line_comment` (related).
 - Website route `/shop/cart/line_comment` (JSON), plain JS without imports.
-- Delivery: the comment is appended to `product_description_variants` in `_prepare_procurement_values`, so it lands in `description_picking`.
+- Delivery: `stock.move._compute_description_picking` adds the comment on its own line of `description_picking`.
 
 ## Status
 
