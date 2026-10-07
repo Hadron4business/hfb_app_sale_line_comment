@@ -16,16 +16,16 @@
 # all copies or substantial portions of the Software.
 #
 #################################################################################
-"""	@version	18.0.1.0.1
+"""	@version	19.0.1.0.0
 	@owner  Hadron for Business
 	@author Hadron for Business sp. z o.o.
 	@date   2026.10.07
 
 	Customer Comment per Order Line - stock moves
 	Shows the current customer comment of the sales order line on the delivery
-	order.
+	order and adds it to the move description printed on the delivery slip.
 """
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class StockMove(models.Model):
@@ -33,5 +33,15 @@ class StockMove(models.Model):
 
     sale_line_comment = fields.Text(
         related='sale_line_id.line_comment', string="Customer Comment")
+
+    @api.depends('sale_line_id.line_comment')
+    def _compute_description_picking(self):
+        # Odoo builds the move description from the sales order line; the
+        # comment is added on its own line, so it is printed on the delivery slip.
+        super()._compute_description_picking()
+        for move in self:
+            comment = move.sale_line_id.line_comment
+            if comment and not move.description_picking_manual:
+                move.description_picking = '%s\n%s' % (move.description_picking or '', comment)
 
 #EoF

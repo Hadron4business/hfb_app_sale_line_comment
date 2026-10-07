@@ -42,7 +42,7 @@ line:
 * delivery order (in the description of the move, so it is printed on the
   delivery slip as well).
 """,
-    'version': "18.0.1.0.1",
+    'version': "19.0.1.0.0",
     'author': "Hadron for Business sp. z o.o.",
     'website': "http://hadronforbusiness.com",
     'license': "OPL-1",
@@ -60,7 +60,7 @@ line:
         'views/report_templates.xml',
     ],
     'assets': {
-        'web.assets_frontend': [
+        'web.assets_frontend_minimal': [
             'hfb_app_sale_line_comment/static/src/js/cart_line_comment.js',
         ],
     },

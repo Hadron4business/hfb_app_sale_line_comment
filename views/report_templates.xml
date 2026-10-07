@@ -2,7 +2,7 @@
 <odoo>
 
     <template id="report_saleorder_document_line_comment" inherit_id="sale.report_saleorder_document">
-        <xpath expr="//td[@name='td_name']" position="inside">
+        <xpath expr="//td[@name='td_product_name']" position="inside">
             <div t-if="line.line_comment" class="text-muted fst-italic" t-field="line.line_comment"/>
         </xpath>
     </template>

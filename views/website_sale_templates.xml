@@ -19,7 +19,7 @@
 
     <template id="sale_order_portal_content_line_comment" inherit_id="sale.sale_order_portal_content"
               name="Portal: Customer Comment per Line">
-        <xpath expr="//td[@id='product_name']" position="inside">
+        <xpath expr="//td[@name='td_product_name']" position="inside">
             <div t-if="line.line_comment" class="text-muted small fst-italic o_hfb_line_comment"
                  t-field="line.line_comment"/>
         </xpath>

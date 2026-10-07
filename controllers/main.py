@@ -16,7 +16,7 @@
 # all copies or substantial portions of the Software.
 #
 #################################################################################
-"""	@version	18.0.1.0.1
+"""	@version	19.0.1.0.0
 	@owner  Hadron for Business
 	@author Hadron for Business sp. z o.o.
 	@date   2026.10.07
@@ -33,9 +33,9 @@ MAX_COMMENT_LENGTH = 2000
 
 class SaleLineCommentController(http.Controller):
 
-    @http.route('/shop/cart/line_comment', type='json', auth='public', website=True, methods=['POST'])
+    @http.route('/shop/cart/line_comment', type='jsonrpc', auth='public', website=True, methods=['POST'])
     def cart_line_comment(self, line_id, comment, **kwargs):
-        order = request.website.sale_get_order()
+        order = request.cart
         if not order:
             return {'error': 'no_order'}
         line = order.order_line.filtered(lambda l: l.id == int(line_id))

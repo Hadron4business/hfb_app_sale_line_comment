@@ -16,15 +16,14 @@
 # all copies or substantial portions of the Software.
 #
 #################################################################################
-"""	@version	18.0.1.0.1
+"""	@version	19.0.1.0.0
 	@owner  Hadron for Business
 	@author Hadron for Business sp. z o.o.
 	@date   2026.10.07
 
 	Customer Comment per Order Line - sales order lines
 	Comment field on the sales order line, copied to the invoice line when
-	invoicing and added to the description of the stock move so that it is
-	printed on the delivery slip.
+	invoicing.
 """
 from odoo import fields, models
 
@@ -43,13 +42,5 @@ class SaleOrderLine(models.Model):
             vals['line_comment'] = self.line_comment
         return vals
 
-    def _prepare_procurement_values(self, *args, **kwargs):
-        # The extra description of the stock move ends up in its
-        # description_picking, which Odoo prints on the delivery slip.
-        values = super()._prepare_procurement_values(*args, **kwargs)
-        if self.line_comment:
-            values['product_description_variants'] = '%s\n%s' % (
-                values.get('product_description_variants') or '', self.line_comment)
-        return values
 
 #EoF
