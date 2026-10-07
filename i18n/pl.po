@@ -1,0 +1,157 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hfb_app_sale_line_comment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-07 09:02+0000\n"
+"PO-Revision-Date: 2026-10-07 09:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: hfb_app_sale_line_comment
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_product_category__sale_line_comment
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_product_product__sale_line_comment
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_product_template__sale_line_comment
+msgid "Ask for a Comment in the Cart"
+msgstr "Pytaj o komentarz w koszyku"
+
+#. module: hfb_app_sale_line_comment
+#. odoo-python
+#: code:addons/hfb_app_sale_line_comment/models/product.py:0
+msgid "Comment"
+msgstr "Komentarz"
+
+#. module: hfb_app_sale_line_comment
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_product_category__sale_line_comment_label
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_product_product__sale_line_comment_label
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_product_template__sale_line_comment_label
+msgid "Comment Label"
+msgstr "Etykieta komentarza"
+
+#. module: hfb_app_sale_line_comment
+#: model_terms:ir.ui.view,arch_db:hfb_app_sale_line_comment.view_order_form_line_comment
+msgid "Comment of the customer for this product"
+msgstr "Komentarz klienta do tego produktu"
+
+#. module: hfb_app_sale_line_comment
+#: model:ir.model.fields,help:hfb_app_sale_line_comment.field_account_move_line__line_comment
+msgid ""
+"Comment of the customer, copied from the sales order line when the invoice "
+"was created."
+msgstr ""
+"Komentarz klienta skopiowany z linii zamówienia sprzedaży przy tworzeniu "
+"faktury."
+
+#. module: hfb_app_sale_line_comment
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_account_move_line__line_comment
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_sale_order_line__line_comment
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_stock_move__sale_line_comment
+msgid "Customer Comment"
+msgstr "Komentarz klienta"
+
+#. module: hfb_app_sale_line_comment
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_product_category__display_name
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_product_template__display_name
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_sale_order_line__display_name
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_stock_move__display_name
+msgid "Display Name"
+msgstr "Nazwa wyświetlana"
+
+#. module: hfb_app_sale_line_comment
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_account_move_line__id
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_product_category__id
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_product_template__id
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_sale_order_line__id
+#: model:ir.model.fields,field_description:hfb_app_sale_line_comment.field_stock_move__id
+msgid "ID"
+msgstr "ID"
+
+#. module: hfb_app_sale_line_comment
+#: model:ir.model,name:hfb_app_sale_line_comment.model_account_move_line
+msgid "Journal Item"
+msgstr "Pozycja zapisu"
+
+#. module: hfb_app_sale_line_comment
+#: model:ir.model.fields,help:hfb_app_sale_line_comment.field_product_category__sale_line_comment_label
+msgid "Label of the comment box, e.g. 'Engraving text'. Default: 'Comment'."
+msgstr ""
+"Etykieta pola komentarza, np. 'Tekst grawerunku'. Domyślnie: 'Komentarz'."
+
+#. module: hfb_app_sale_line_comment
+#: model:ir.model.fields,help:hfb_app_sale_line_comment.field_product_product__sale_line_comment_label
+#: model:ir.model.fields,help:hfb_app_sale_line_comment.field_product_template__sale_line_comment_label
+msgid ""
+"Label of the comment box, e.g. 'Engraving text'. Empty: the label of the "
+"category, otherwise 'Comment'."
+msgstr ""
+"Etykieta pola komentarza, np. 'Tekst grawerunku'. Puste: etykieta z "
+"kategorii, a jeśli jej brak - 'Komentarz'."
+
+#. module: hfb_app_sale_line_comment
+#: model:ir.model.fields,help:hfb_app_sale_line_comment.field_sale_order_line__line_comment
+#: model:ir.model.fields,help:hfb_app_sale_line_comment.field_stock_move__sale_line_comment
+msgid ""
+"Note entered by the customer for this product in the website cart. Copied to"
+" the invoice line and to the delivery."
+msgstr ""
+"Uwaga wpisana przez klienta do tego produktu w koszyku sklepu. Kopiowana na "
+"linię faktury i do wydania (WZ)."
+
+#. module: hfb_app_sale_line_comment
+#: model:ir.model,name:hfb_app_sale_line_comment.model_product_template
+msgid "Product"
+msgstr "Produkt"
+
+#. module: hfb_app_sale_line_comment
+#: model:ir.model,name:hfb_app_sale_line_comment.model_product_category
+msgid "Product Category"
+msgstr "Kategoria produktu"
+
+#. module: hfb_app_sale_line_comment
+#: model:ir.model.fields,help:hfb_app_sale_line_comment.field_product_category__sale_line_comment
+msgid ""
+"Products of this category and of its subcategories get a comment box in the "
+"website cart."
+msgstr ""
+"Produkty z tej kategorii i jej podkategorii dostają pole komentarza w "
+"koszyku sklepu."
+
+#. module: hfb_app_sale_line_comment
+#: model:ir.model,name:hfb_app_sale_line_comment.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Pozycja zamówienia sprzedaży"
+
+#. module: hfb_app_sale_line_comment
+#: model:ir.model.fields,help:hfb_app_sale_line_comment.field_product_product__sale_line_comment
+#: model:ir.model.fields,help:hfb_app_sale_line_comment.field_product_template__sale_line_comment
+msgid ""
+"Shows a comment box next to this product in the website cart. Can also be "
+"switched on for a whole product category."
+msgstr ""
+"Pokazuje pole komentarza przy tym produkcie w koszyku sklepu. Można je też "
+"włączyć dla całej kategorii produktów."
+
+#. module: hfb_app_sale_line_comment
+#: model:ir.model,name:hfb_app_sale_line_comment.model_stock_move
+msgid "Stock Move"
+msgstr "Ruch magazynowy"
+
+#. module: hfb_app_sale_line_comment
+#: model_terms:ir.ui.view,arch_db:hfb_app_sale_line_comment.product_category_form_view_line_comment
+msgid "Website Cart"
+msgstr "Koszyk sklepu"
+
+#. module: hfb_app_sale_line_comment
+#: model_terms:ir.ui.view,arch_db:hfb_app_sale_line_comment.product_category_form_view_line_comment
+#: model_terms:ir.ui.view,arch_db:hfb_app_sale_line_comment.product_template_form_view_line_comment
+msgid "e.g. Engraving text"
+msgstr "np. Tekst grawerunku"
