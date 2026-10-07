@@ -6,10 +6,12 @@
         <field name="model">product.template</field>
         <field name="inherit_id" ref="website_sale.product_template_form_view"/>
         <field name="arch" type="xml">
-            <group name="extra_info" position="inside">
-                <field name="sale_line_comment"/>
-                <field name="sale_line_comment_label" invisible="not sale_line_comment"
-                       placeholder="e.g. Engraving text"/>
+            <group name="upsell" position="after">
+                <group name="line_comment" string="Website Cart">
+                    <field name="sale_line_comment"/>
+                    <field name="sale_line_comment_label" invisible="not sale_line_comment"
+                           placeholder="e.g. Engraving text"/>
+                </group>
             </group>
         </field>
     </record>

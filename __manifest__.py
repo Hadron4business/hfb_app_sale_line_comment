@@ -42,7 +42,7 @@ line:
 * delivery order (in the description of the move, so it is printed on the
   delivery slip as well).
 """,
-    'version': "18.0.1.0.1",
+    'version': "17.0.1.0.0",
     'author': "Hadron for Business sp. z o.o.",
     'website': "http://hadronforbusiness.com",
     'license': "OPL-1",

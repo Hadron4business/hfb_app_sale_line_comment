@@ -1,4 +1,3 @@
-/** @odoo-module ignore */
 // Hadron for Business sp. z o.o. - OPL-1
 // Saves the comment typed in the website cart. Plain script (no imports) so it
 // works the same in every Odoo version; keepalive lets the last request finish
