@@ -33,4 +33,4 @@ Switch on a comment box for chosen products or whole categories, with your own l
 
 ## Status
 
-Odoo 17 build. Missing before publication: icon, banner, tests on 17/19/20.
+Odoo 17 build. Tested on the Odoo.sh test instances (automated RPC tests and manual tests, 2026-10-07). Missing before publication: icon, banner.
