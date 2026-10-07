@@ -16,7 +16,7 @@
 # all copies or substantial portions of the Software.
 #
 #################################################################################
-"""	@version	18.0.1.0.0
+"""	@version	18.0.1.0.1
 	@owner  Hadron for Business
 	@author Hadron for Business sp. z o.o.
 	@date   2026.10.07
@@ -48,8 +48,8 @@ class SaleOrderLine(models.Model):
         # description_picking, which Odoo prints on the delivery slip.
         values = super()._prepare_procurement_values(*args, **kwargs)
         if self.line_comment:
-            values['product_description_variants'] = '\n'.join(
-                filter(None, [values.get('product_description_variants'), self.line_comment]))
+            values['product_description_variants'] = '%s\n%s' % (
+                values.get('product_description_variants') or '', self.line_comment)
         return values
 
 #EoF
